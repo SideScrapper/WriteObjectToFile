@@ -9,6 +9,8 @@ public class Weather {
     private double lat;
     private double lon;
 
+    public Weather(){}
+
     public Weather(String city, String iconUrl, double temperature, double feelslikeC, String conditionText, double lat, double lon) {
         this.city = city;
         this.iconUrl = iconUrl;

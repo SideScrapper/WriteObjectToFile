@@ -1,1 +1,1 @@
-{"city":"Torun","iconUrl":"www","temperature":40.0,"feelslikeC":60.0,"conditionText":"Slonecznie","lat":54.54,"lon":21.23}
+[{"city":"Torun","iconUrl":"www","temperature":40.0,"feelslikeC":60.0,"conditionText":"Slonecznie","lat":54.54,"lon":21.23},{"city":"Bydgoszcz","iconUrl":"www","temperature":32.0,"feelslikeC":38.0,"conditionText":"Slonecznie","lat":16.13,"lon":15.12},{"city":"Warszawa","iconUrl":"www","temperature":21.0,"feelslikeC":24.0,"conditionText":"Pochmurnie","lat":45.65,"lon":54.53}]

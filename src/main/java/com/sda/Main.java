@@ -9,6 +9,10 @@ import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
+        WeatherService weatherService = new WeatherService(
+                "http://api.apixu.com/v1/current.json",
+                "e8f1b636c5954d09b29155510180709");
+
         List<Weather> weatherList = new ArrayList<Weather>();
 
         Weather weather = new Weather("Torun", "www", 40, 60,
@@ -24,9 +28,19 @@ public class Main {
         ObjectMapper objectMapper = new ObjectMapper();
         File filename = new File("weather.json");
         try {
-            objectMapper.writeValue(filename, weather);
+            objectMapper.writeValue(filename, weatherList);
         } catch (IOException e) {
             e.printStackTrace();
         }
+
+        try {
+            Weather[] readWeather = objectMapper.readValue(filename, Weather[].class);
+            for (Weather w : readWeather) {
+                System.out.println(w.getCity());
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
     }
 }
